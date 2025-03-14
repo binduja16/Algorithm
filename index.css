@@ -1,0 +1,183 @@
+/* General Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #1e1e2e;
+  color: #ffffff;
+  text-align: center;
+  padding: 20px;
+  margin: 0;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Navigation Bar */
+.navbar {
+  background: #4a148c;
+  color: white;
+  padding: 20px;
+  font-size: 22px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Hidden Elements */
+.hidden {
+  display: none;
+}
+
+/* Leaderboard */
+.leaderboard {
+  width: 80%;
+  margin: 20px auto;
+  padding: 15px;
+  background: #2e2e3e;
+  color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+  text-align: center;
+  position: relative;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Table Styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th, td {
+  padding: 10px;
+  border: 1px solid #bb86fc;
+  text-align: center;
+}
+
+th {
+  background: #6200ea;
+  color: white;
+}
+
+td {
+  background: #1e1e2e;
+}
+
+/* Buttons */
+button {
+  padding: 12px 20px;
+  margin: 5px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.2s ease-in-out, background 0.3s, color 0.3s;
+}
+
+.run-button {
+  background: #03dac5;
+  color: #000;
+}
+
+.run-button:hover {
+  background: #00c4b4;
+  transform: scale(1.1);
+}
+
+.clear-button {
+  background: #ff5252;
+  color: white;
+}
+
+.clear-button:hover {
+  background: #d32f2f;
+  transform: scale(1.1);
+}
+
+.reset-button {
+  background: #ff9800;
+  color: white;
+}
+
+.reset-button:hover {
+  background: #e65100;
+  transform: scale(1.1);
+}
+
+/* Code Input Box */
+textarea {
+  width: 100%;
+  font-size: 16px;
+  padding: 10px;
+  background: #121212;
+  color: #ffffff;
+  border-radius: 8px;
+  border: 1px solid #bb86fc;
+  height: 300px;
+  resize: vertical;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Light Mode */
+.light-mode {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.light-mode .navbar {
+  background: #d1c4e9;
+  color: #000;
+}
+
+.light-mode .leaderboard {
+  background: #f5f5f5;
+  color: #000;
+}
+
+.light-mode table {
+  border-color: #4a148c;
+}
+
+.light-mode th {
+  background: #9575cd;
+  color: white;
+}
+
+.light-mode td {
+  background: #e1bee7;
+}
+
+.light-mode textarea {
+  background: #ffffff;
+  color: #000000;
+  border: 1px solid #6200ea;
+}
+
+.light-mode .run-button {
+  background: #6200ea;
+  color: white;
+}
+
+.light-mode .clear-button {
+  background: #d32f2f;
+}
+
+.light-mode .reset-button {
+  background: #e65100;
+}
+
+.light-mode .output-box {
+  background: #f5f5f5;
+  color: #000;
+}
+
+/* Output Box */
+.output-box {
+  background: #121212;
+  color: #00ff00;
+  padding: 10px;
+  text-align: left;
+  white-space: pre-wrap;
+  border-radius: 8px;
+  transition: background 0.3s, color 0.3s;
+}

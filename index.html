@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Algorithm Visualizer & Code Executor</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <nav class="navbar">
+        <h1>Algorithm Visualizer</h1>
+        <button id="theme-toggle">🌙</button>
+    </nav>
+
+    <div class="container">
+        <h2 class="slide-in">Select an Algorithm Category</h2>
+        <div class="button-container">
+            <button class="category-btn" onclick="showAlgorithms('sorting')">Sorting</button>
+            <button class="category-btn" onclick="showAlgorithms('searching')">Searching</button>
+            <button class="category-btn" onclick="showAlgorithms('graph')">Graph Algorithms</button>
+            <button class="category-btn" onclick="showAlgorithms('dp')">Dynamic Programming</button>
+            <button class="category-btn" onclick="showAlgorithms('greedy')">Greedy Algorithms</button>
+            <button class="category-btn" onclick="showAlgorithms('backtracking')">Backtracking</button>
+            <button class="category-btn" onclick="showAlgorithms('tree')">Tree Algorithms</button>
+        </div>
+
+        <!-- Algorithm Selection -->
+        <div id="algorithm-selection" class="hidden slide-in">
+            <h3>Select an Algorithm:</h3>
+            <select id="algorithm-dropdown" onchange="displayAlgorithmDetails()">
+                <option value="">-- Select Algorithm --</option>
+            </select>
+        </div>
+
+        <!-- Algorithm Details -->
+        <div id="algorithm-details" class="hidden slide-in">
+            <h3>Algorithm Details</h3>
+            <p id="algorithm-description">Select an algorithm to see details.</p>
+        </div>
+
+        <!-- Leaderboard -->
+        <div id="leaderboard" class="leaderboard">
+            <h2>Leaderboard</h2>
+            <button class="clear-button" onclick="clearLeaderboard()">Clear Leaderboard</button>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Algorithm</th>
+                        <th>Best Case</th>
+                        <th>Worst Case</th>
+                        <th>Execution Time</th>
+                        <th>Output</th>
+                    </tr>
+                </thead>
+                <tbody id="leaderboard-body">
+                    <!-- Data will be inserted dynamically -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Code Execution -->
+        <div id="code-execution" class="code-executor left-swing">
+            <h2>Test Your Code</h2>
+            <label>Select Language:</label>
+            <select id="language-select">
+                <option value="50">C</option>
+                <option value="54">C++</option>
+                <option value="62">Java</option>
+                <option value="71">Python</option>
+            </select>
+
+            <textarea id="code-input" rows="10" placeholder="Write your code here..."></textarea>
+            <button class="run-button" onclick="testExecuteCode()">Run Code</button>
+            <button class="reset-button" onclick="resetCode()">Reset Code</button>
+
+            <h3>Output:</h3>
+            <pre id="output-display" class="output-box">Waiting for execution...</pre>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
